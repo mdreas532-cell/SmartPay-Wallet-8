@@ -2829,7 +2829,7 @@
             text-align: center;
         }
 
-‌        ‌.coming-soon-icon {
+        .coming-soon-icon {
             font-size: 80px;
             color: var(--primary-light);
             margin-bottom: 20px;
@@ -2863,13 +2863,14 @@
              height: 100%;
              border: none;
              -webkit-overflow-scrolling: touch;
+         }
 
-         .xbet-iframe-wrapper {
+         .1xbet-iframe-wrapper {
              height: calc(100vh - 70px);
              width: 100%;
          }
 
-         .xbet-iframe-wrapper iframe {
+         .1xbet-iframe-wrapper iframe {
              width: 100%;
              height: 100%;
              border: none;
@@ -4024,6 +4025,44 @@
             </div>
         </div>
 
+        <!-- ========== NEW PLAY BETTING GAMES PAGES ========== -->
+        <!-- 1xBet (Coming Soon) -->
+        <div id="1xbet-view" class="page-view">
+
+    <div class="page-header">
+        <div class="back-btn" onclick="navigateTo('dashboard')">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <div class="page-title">1xBet</div>
+    </div>
+
+    <!-- 🎯 1xBet Iframe Container -->
+    <div class="1xbet-iframe-wrapper">
+        <iframe 
+            src="https://smart-pay-wallet-8.vercel.app"
+            title="1xBet"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+</div>
+
+        <!-- Aviator (Coming Soon) -->
+        <div id="aviator-view" class="page-view">
+            <div class="page-header">
+                <div class="back-btn" onclick="navigateTo('dashboard')">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="page-title">Aviator</div>
+            </div>
+            <div class="coming-soon-container">
+                <div class="coming-soon-icon"><i class="fa-solid fa-plane"></i></div>
+                <h2 class="coming-soon-title">Coming Soon</h2>
+                <p class="coming-soon-message">এভিয়েটর গেমটি খুব শীঘ্রই চালু করা হবে।</p>
+            </div>
+        </div>
+
         <!-- SIDEBAR MENU -->
         <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleMenu()"></div>
         <div class="sidebar" id="sidebar">
@@ -4070,6 +4109,15 @@
                     <i class="fa-solid fa-list-check"></i> API Job
                 </div>
 
+                <!-- SECTION: Play Betting Games -->
+                <div class="sidebar-section-title">Play Betting Games</div>
+                <div class="menu-item" onclick="navigateTo('1xbet')">
+                    <i class="fa-solid fa-dice"></i> 1xBet
+                </div>
+                <div class="menu-item" onclick="navigateTo('aviator')">
+                    <i class="fa-solid fa-plane"></i> Aviator
+                </div>
+
                 <!-- SECTION: Salary & Rewards -->
                 <div class="sidebar-section-title">Salary & Rewards</div>
                 <div class="menu-item" onclick="navigateTo('salary-apply')">
@@ -4080,46 +4128,6 @@
                 </div>
                 <div class="menu-item" onclick="navigateTo('gift')">
                     <i class="fa-solid fa-gift"></i> Gift
-                </div>
-
-                <!-- SECTION: Play Betting Games (New Update) -->
-                <div class="sidebar-section-title">🎮 Play Betting Games</div>
-                <!-- 🎰 1xBet Page -->
-                <!-- 🎰 1xBet Page -->
-<!-- 🎰 1xBet Page -->
-<div id="xbet-view" class="page-view">
-
-    <div class="page-header">
-
-        <!-- Back Button -->
-        <div class="back-btn" onclick="navigateTo('dashboard')">
-            <i class="fa-solid fa-arrow-left"></i>
-        </div>
-
-        <!-- Page Title -->
-        <div class="page-title">
-            1xBet
-        </div>
-
-    </div>
-
-    <!-- 🎯 1xBet Iframe Container -->
-    <div class="xbet-iframe-wrapper">
-
-        <iframe 
-            src="https://smart-pay-wallet-8.vercel.app"
-            title="1xBet"
-            loading="lazy"
-            allowfullscreen>
-        </iframe>
-
-    </div>
-
-</div>
-  
-
-                <div class="menu-item">
-                    <i class="fa-solid fa-plane"></i> Aviator <span style="margin-left: auto; font-size: 11px; background: #f59e0b; color: white; padding: 2px 8px; border-radius: 12px;">Coming Soon</span>
                 </div>
 
                 <!-- SECTION: Wallet & Withdraw -->
@@ -5988,7 +5996,10 @@
                 'telegram-sell': 'telegram-sell-view',
                 'whatsapp-sell': 'whatsapp-sell-view',
                 'api-jobs': 'api-jobs-view',
-                'spin': 'spin-view'
+                'spin': 'spin-view',
+                // New betting games pages
+                '1xbet': '1xbet-view',
+                'aviator': 'aviator-view'
             };
             
             if(pages[pageId]) {
@@ -7567,7 +7578,7 @@
             console.log('✅ REFERRAL SYSTEM UPDATED: Link now shows only baseUrl, no auto-fill from URL');
             console.log('✅ NEW WALLETS ADDED: Gift Wallet, API Job Wallet, Spin Wallet');
             console.log('✅ COMING SOON PAGES: Gift, Facebook Sell, Instagram, Telegram, WhatsApp, API Job');
-            console.log('✅ NEW SECTION ADDED: Play Betting Games (1xBet & Aviator - Coming Soon)');
+            console.log('✅ NEW SECTION: Play Betting Games with 1xBet and Aviator (Coming Soon)');
 
             // Add event listener for wallet dropdown
             const walletSelect = document.getElementById('withdraw-wallet-select');
