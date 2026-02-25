@@ -2829,7 +2829,7 @@
             text-align: center;
         }
 
-        .coming-soon-icon {
+‌        ‌.coming-soon-icon {
             font-size: 80px;
             color: var(--primary-light);
             margin-bottom: 20px;
@@ -2865,8 +2865,8 @@
              -webkit-overflow-scrolling: touch;
          }
 
-         /* --- COMING SOON 1xbet STYLES --- */
-         .coming-soon-container {
+         /* --- COMING SOON PAGE STYLES --- */
+        .coming-soon-container {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -2874,43 +2874,43 @@
             min-height: 60vh;
             padding: 40px 20px;
             text-align: center;
-         }
+        }
 
-         .coming-soon-icon {
+‌        ‌.coming-soon-icon {
             font-size: 80px;
             color: var(--primary-light);
             margin-bottom: 20px;
             opacity: 0.7;
-         }
-         .coming-soon-title {
+        }
+        .coming-soon-title {
             font-size: 28px;
             font-weight: 800;
             color: var(--dark);
             margin-bottom: 15px;
-         }
+        }
 
-         .coming-soon-message {
+        .coming-soon-message {
             font-size: 16px;
             color: var(--text-light);
             max-width: 300px;
             line-height: 1.6;
-         }
+        }
 
-         .1xbet-iframe-wrapper {
-             position: fixed;
-             top: 70px;
-             left: 0;
-             right: 0;
-             bottom: 0;
-             overflow: hidden;
+        .1xbet-iframe-wrapper {
+            position: fixed;
+            top: 70px;     /* header height */
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+         }
 
          .1xbet-iframe-wrapper iframe {
              width: 100%;
              height: 100%;
              border: none;
              -webkit-overflow-scrolling: touch;
-          }
-
+         }
     </style>
 </head>
 <body>
@@ -3969,6 +3969,23 @@
 
 </div>
 
+        <!-- 1xbet betting games -->
+        <div id="1xbet-view" class="page-view">
+            <div class="page-header">
+                <div class="back-btn" onclick="navigateTo('dashboard')">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="page-title">1xbet</div>
+            </div>
+            <div class="1xbet-iframe-wrapper">
+                <iframe 
+                    src="https://spin-smartpay.vercel.app"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
         <!-- Facebook Sell (Coming Soon) -->
         <div id="facebook-sell-view" class="page-view">
             <div class="page-header">
@@ -4061,55 +4078,6 @@
             </div>
         </div>
 
-        <!-- ========== NEW PLAY BETTING GAMES PAGES ========== -->
-        <!-- 1xBet (Coming Soon) -->
-       <div id="1xbet-view" class="page-view">
-            <div class="page-header">
-                <div class="back-btn" onclick="navigateTo('dashboard')">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </div>
-                <div class="page-title">1xbet</div>
-            </div>
-            <div class="1xbet-iframe-wrapper">
-                <iframe 
-                    src="https://smartpay-wallet24.vercel.app"
-                    frameborder="0"
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-
-        <!-- Aviator (Coming Soon) -->
-        <div id="gift-view" class="page-view">
-
-    <!-- 🔹 Page Header -->
-    <div class="page-header">
-
-        <!-- Back Button -->
-        <div class="back-btn" onclick="navigateTo('dashboard')">
-            <i class="fa-solid fa-arrow-left"></i>
-        </div>
-
-        <!-- Page Title -->
-        <div class="page-title">
-            Gift
-        </div>
-
-    </div>
-
-    <!-- 🎯 Gift Game Iframe Container -->
-    <div class="gift-iframe-wrapper">
-
-        <iframe 
-            src="https://gift-smartpay.vercel.app"
-            frameborder="0"
-            allowfullscreen>
-        </iframe>
-
-    </div>
-
-</div>
-
         <!-- SIDEBAR MENU -->
         <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleMenu()"></div>
         <div class="sidebar" id="sidebar">
@@ -4156,15 +4124,6 @@
                     <i class="fa-solid fa-list-check"></i> API Job
                 </div>
 
-                <!-- SECTION: Play Betting Games -->
-                <div class="sidebar-section-title">Play Betting Games</div>
-                <div class="menu-item" onclick="navigateTo('1xbet')">
-                    <i class="fa-solid fa-dice"></i> 1xBet
-                </div>
-                <div class="menu-item" onclick="navigateTo('aviator')">
-                    <i class="fa-solid fa-plane"></i> Aviator
-                </div>
-
                 <!-- SECTION: Salary & Rewards -->
                 <div class="sidebar-section-title">Salary & Rewards</div>
                 <div class="menu-item" onclick="navigateTo('salary-apply')">
@@ -4183,6 +4142,12 @@
                     <i class="fa-solid fa-money-bill-transfer"></i> Withdraw
                 </div>
 
+                <!-- SECTION: Play Betting Games -->
+                <div class="sidebar-section-title">1xbet</div>
+                <div class="menu-item" onclick="navigateTo('1xbet')">
+                    <i class="fa-solid fa-hand-holding-dollar"></i> 1xbet
+                </div>
+                
                 <!-- SECTION: Digital Selling -->
                 <div class="sidebar-section-title">Digital Selling</div>
                 <div class="menu-item" onclick="navigateTo('gmail-sell')">
@@ -6043,10 +6008,7 @@
                 'telegram-sell': 'telegram-sell-view',
                 'whatsapp-sell': 'whatsapp-sell-view',
                 'api-jobs': 'api-jobs-view',
-                'spin': 'spin-view',
-                // New betting games pages
-                '1xbet': '1xbet-view',
-                'aviator': 'aviator-view'
+                'spin': 'spin-view'
             };
             
             if(pages[pageId]) {
@@ -7625,7 +7587,6 @@
             console.log('✅ REFERRAL SYSTEM UPDATED: Link now shows only baseUrl, no auto-fill from URL');
             console.log('✅ NEW WALLETS ADDED: Gift Wallet, API Job Wallet, Spin Wallet');
             console.log('✅ COMING SOON PAGES: Gift, Facebook Sell, Instagram, Telegram, WhatsApp, API Job');
-            console.log('✅ NEW SECTION: Play Betting Games with 1xBet and Aviator (Coming Soon)');
 
             // Add event listener for wallet dropdown
             const walletSelect = document.getElementById('withdraw-wallet-select');
