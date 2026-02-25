@@ -2809,44 +2809,13 @@
             right: 0;
             bottom: 0;
             overflow: hidden;
-         }
-
-         .spin-iframe-wrapper iframe {
-             width: 100%;
-             height: 100%;
-             border: none;
-             -webkit-overflow-scrolling: touch;
-         }
-       
-         /* --- COMING SOON PAGE STYLES --- */
-        .coming-soon-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 60vh;
-            padding: 40px 20px;
-            text-align: center;
         }
 
-‌        ‌.coming-soon-icon {
-            font-size: 80px;
-            color: var(--primary-light);
-            margin-bottom: 20px;
-            opacity: 0.7;
-        }
-        .coming-soon-title {
-            font-size: 28px;
-            font-weight: 800;
-            color: var(--dark);
-            margin-bottom: 15px;
-        }
-
-        .coming-soon-message {
-            font-size: 16px;
-            color: var(--text-light);
-            max-width: 300px;
-            line-height: 1.6;
+        .spin-iframe-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            -webkit-overflow-scrolling: touch;
         }
 
         .gift-iframe-wrapper {
@@ -2856,61 +2825,40 @@
             right: 0;
             bottom: 0;
             overflow: hidden;
-         }
-
-         .gift-iframe-wrapper iframe {
-             width: 100%;
-             height: 100%;
-             border: none;
-             -webkit-overflow-scrolling: touch;
-         }
-
-         /* --- COMING SOON PAGE STYLES --- */
-        .coming-soon-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 60vh;
-            padding: 40px 20px;
-            text-align: center;
         }
 
-‌        ‌.coming-soon-icon {
-            font-size: 80px;
-            color: var(--primary-light);
-            margin-bottom: 20px;
-            opacity: 0.7;
-        }
-        .coming-soon-title {
-            font-size: 28px;
-            font-weight: 800;
-            color: var(--dark);
-            margin-bottom: 15px;
+        .gift-iframe-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            -webkit-overflow-scrolling: touch;
         }
 
-        .coming-soon-message {
-            font-size: 16px;
-            color: var(--text-light);
-            max-width: 300px;
-            line-height: 1.6;
-        }
-
-        .1xbet-iframe-wrapper {
+        /* --- NEW IFRAME WRAPPERS FOR ADDED PAGES --- */
+        .api-job-iframe-wrapper,
+        .fb-sell-iframe-wrapper,
+        .insta-sell-iframe-wrapper,
+        .telegram-sell-iframe-wrapper,
+        .whatsapp-sell-iframe-wrapper,
+        .onexbet-iframe-wrapper {
             position: fixed;
-            top: 70px;     /* header height */
+            top: 70px;
             left: 0;
             right: 0;
             bottom: 0;
             overflow: hidden;
-         }
-
-         .1xbet-iframe-wrapper iframe {
-             width: 100%;
-             height: 100%;
-             border: none;
-             -webkit-overflow-scrolling: touch;
-         }
+        }
+        .api-job-iframe-wrapper iframe,
+        .fb-sell-iframe-wrapper iframe,
+        .insta-sell-iframe-wrapper iframe,
+        .telegram-sell-iframe-wrapper iframe,
+        .whatsapp-sell-iframe-wrapper iframe,
+        .onexbet-iframe-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            -webkit-overflow-scrolling: touch;
+        }
     </style>
 </head>
 <body>
@@ -3937,116 +3885,9 @@
             </div>
         </div>
 
-        <!-- ========== NEW COMING SOON PAGES ========== -->
-        <!-- Gift (Coming Soon) -->
-        <div id="gift-view" class="page-view">
+        <!-- ========== NEW PAGES (IFRAME PREVIEW) ========== -->
 
-    <!-- 🔹 Page Header -->
-    <div class="page-header">
-
-        <!-- Back Button -->
-        <div class="back-btn" onclick="navigateTo('dashboard')">
-            <i class="fa-solid fa-arrow-left"></i>
-        </div>
-
-        <!-- Page Title -->
-        <div class="page-title">
-            Gift
-        </div>
-
-    </div>
-
-    <!-- 🎯 Gift Game Iframe Container -->
-    <div class="gift-iframe-wrapper">
-
-        <iframe 
-            src="https://gift-smartpay.vercel.app"
-            frameborder="0"
-            allowfullscreen>
-        </iframe>
-
-    </div>
-
-</div>
-
-        <!-- 1xbet betting games -->
-        <div id="1xbet-view" class="page-view">
-            <div class="page-header">
-                <div class="back-btn" onclick="navigateTo('dashboard')">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </div>
-                <div class="page-title">1xbet</div>
-            </div>
-            <div class="1xbet-iframe-wrapper">
-                <iframe 
-                    src="https://spin-smartpay.vercel.app"
-                    frameborder="0"
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-
-        <!-- Facebook Sell (Coming Soon) -->
-        <div id="facebook-sell-view" class="page-view">
-            <div class="page-header">
-                <div class="back-btn" onclick="navigateTo('dashboard')">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </div>
-                <div class="page-title">Facebook Sell</div>
-            </div>
-            <div class="coming-soon-container">
-                <div class="coming-soon-icon"><i class="fa-brands fa-facebook"></i></div>
-                <h2 class="coming-soon-title">Coming Soon</h2>
-                <p class="coming-soon-message">এই ফিচারটি খুব শীঘ্রই চালু করা হবে।</p>
-            </div>
-        </div>
-
-        <!-- Instagram Sell (Coming Soon) -->
-        <div id="instagram-sell-view" class="page-view">
-            <div class="page-header">
-                <div class="back-btn" onclick="navigateTo('dashboard')">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </div>
-                <div class="page-title">Instagram Sell</div>
-            </div>
-            <div class="coming-soon-container">
-                <div class="coming-soon-icon"><i class="fa-brands fa-instagram"></i></div>
-                <h2 class="coming-soon-title">Coming Soon</h2>
-                <p class="coming-soon-message">এই ফিচারটি খুব শীঘ্রই চালু করা হবে।</p>
-            </div>
-        </div>
-
-        <!-- Telegram Sell (Coming Soon) -->
-        <div id="telegram-sell-view" class="page-view">
-            <div class="page-header">
-                <div class="back-btn" onclick="navigateTo('dashboard')">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </div>
-                <div class="page-title">Telegram Sell</div>
-            </div>
-            <div class="coming-soon-container">
-                <div class="coming-soon-icon"><i class="fa-brands fa-telegram"></i></div>
-                <h2 class="coming-soon-title">Coming Soon</h2>
-                <p class="coming-soon-message">এই ফিচারটি খুব শীঘ্রই চালু করা হবে।</p>
-            </div>
-        </div>
-
-        <!-- WhatsApp Sell (Coming Soon) -->
-        <div id="whatsapp-sell-view" class="page-view">
-            <div class="page-header">
-                <div class="back-btn" onclick="navigateTo('dashboard')">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </div>
-                <div class="page-title">WhatsApp Sell</div>
-            </div>
-            <div class="coming-soon-container">
-                <div class="coming-soon-icon"><i class="fa-brands fa-whatsapp"></i></div>
-                <h2 class="coming-soon-title">Coming Soon</h2>
-                <p class="coming-soon-message">এই ফিচারটি খুব শীঘ্রই চালু করা হবে।</p>
-            </div>
-        </div>
-
-        <!-- API Job (Coming Soon) -->
+        <!-- API Job Page -->
         <div id="api-jobs-view" class="page-view">
             <div class="page-header">
                 <div class="back-btn" onclick="navigateTo('dashboard')">
@@ -4054,15 +3895,91 @@
                 </div>
                 <div class="page-title">API Job</div>
             </div>
-            <div class="coming-soon-container">
-                <div class="coming-soon-icon"><i class="fa-solid fa-microchip"></i></div>
-                <h2 class="coming-soon-title">Coming Soon</h2>
-                <p class="coming-soon-message">এই ফিচারটি খুব শীঘ্রই চালু করা হবে।</p>
+            <div class="api-job-iframe-wrapper">
+                <iframe src="https://api-job.vercel.app" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
 
-        <!-- Spin (existing functionality remains unchanged) -->
-       <div id="spin-view" class="page-view">
+        <!-- 1xBet Page -->
+        <div id="onexbet-view" class="page-view">
+            <div class="page-header">
+                <div class="back-btn" onclick="navigateTo('dashboard')">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="page-title">1xBet</div>
+            </div>
+            <div class="onexbet-iframe-wrapper">
+                <iframe src="https://1xbet.vercel.app" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Facebook Sell Page -->
+        <div id="facebook-sell-view" class="page-view">
+            <div class="page-header">
+                <div class="back-btn" onclick="navigateTo('dashboard')">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="page-title">Facebook Sell</div>
+            </div>
+            <div class="fb-sell-iframe-wrapper">
+                <iframe src="https://facebook-sell.vercel.app" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Instagram Sell Page -->
+        <div id="instagram-sell-view" class="page-view">
+            <div class="page-header">
+                <div class="back-btn" onclick="navigateTo('dashboard')">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="page-title">Instagram Sell</div>
+            </div>
+            <div class="insta-sell-iframe-wrapper">
+                <iframe src="https://instagram-sell.vercel.app" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Telegram Sell Page -->
+        <div id="telegram-sell-view" class="page-view">
+            <div class="page-header">
+                <div class="back-btn" onclick="navigateTo('dashboard')">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="page-title">Telegram Sell</div>
+            </div>
+            <div class="telegram-sell-iframe-wrapper">
+                <iframe src="https://telegram-sell.vercel.app" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- WhatsApp Sell Page -->
+        <div id="whatsapp-sell-view" class="page-view">
+            <div class="page-header">
+                <div class="back-btn" onclick="navigateTo('dashboard')">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="page-title">WhatsApp Sell</div>
+            </div>
+            <div class="whatsapp-sell-iframe-wrapper">
+                <iframe src="https://whatsapp-sell.vercel.app" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Gift (existing) -->
+        <div id="gift-view" class="page-view">
+            <div class="page-header">
+                <div class="back-btn" onclick="navigateTo('dashboard')">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="page-title">Gift</div>
+            </div>
+            <div class="gift-iframe-wrapper">
+                <iframe src="https://gift-smartpay.vercel.app" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Spin (existing) -->
+        <div id="spin-view" class="page-view">
             <div class="page-header">
                 <div class="back-btn" onclick="navigateTo('dashboard')">
                     <i class="fa-solid fa-arrow-left"></i>
@@ -4070,11 +3987,7 @@
                 <div class="page-title">Spin</div>
             </div>
             <div class="spin-iframe-wrapper">
-                <iframe 
-                    src="https://spin-smartpay.vercel.app"
-                    frameborder="0"
-                    allowfullscreen>
-                </iframe>
+                <iframe src="https://spin-smartpay.vercel.app" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
 
@@ -4119,7 +4032,7 @@
                 <div class="menu-item" onclick="navigateTo('free-job-projects')">
                     <i class="fa-solid fa-briefcase"></i> Free Job
                 </div>
-                <!-- API Job (coming soon) -->
+                <!-- API Job (now iframe) -->
                 <div class="menu-item" onclick="navigateTo('api-jobs')">
                     <i class="fa-solid fa-list-check"></i> API Job
                 </div>
@@ -4141,13 +4054,11 @@
                 <div class="menu-item" onclick="navigateTo('withdraw')">
                     <i class="fa-solid fa-money-bill-transfer"></i> Withdraw
                 </div>
-
-                <!-- SECTION: Play Betting Games -->
-                <div class="sidebar-section-title">1xbet</div>
-                <div class="menu-item" onclick="navigateTo('1xbet')">
-                    <i class="fa-solid fa-hand-holding-dollar"></i> 1xbet
+                <!-- New 1xBet menu item -->
+                <div class="menu-item" onclick="navigateTo('onexbet')">
+                    <i class="fa-solid fa-dollar-sign"></i> 1xBet
                 </div>
-                
+
                 <!-- SECTION: Digital Selling -->
                 <div class="sidebar-section-title">Digital Selling</div>
                 <div class="menu-item" onclick="navigateTo('gmail-sell')">
@@ -6001,13 +5912,14 @@
                 'free-job-jobs': 'free-job-jobs-view',
                 'free-job-details': 'free-job-details-view',
                 'job-submissions': 'job-submissions-view',
-                // New coming soon pages
-                'gift': 'gift-view',
+                // New pages
+                'api-jobs': 'api-jobs-view',
+                'onexbet': 'onexbet-view',
                 'facebook-sell': 'facebook-sell-view',
                 'instagram-sell': 'instagram-sell-view',
                 'telegram-sell': 'telegram-sell-view',
                 'whatsapp-sell': 'whatsapp-sell-view',
-                'api-jobs': 'api-jobs-view',
+                'gift': 'gift-view',
                 'spin': 'spin-view'
             };
             
@@ -7586,7 +7498,7 @@
             console.log('✅ PROBLEM #3 FIXED: Salary packages unlock & claim system now working (one-time claim, wallet updates)');
             console.log('✅ REFERRAL SYSTEM UPDATED: Link now shows only baseUrl, no auto-fill from URL');
             console.log('✅ NEW WALLETS ADDED: Gift Wallet, API Job Wallet, Spin Wallet');
-            console.log('✅ COMING SOON PAGES: Gift, Facebook Sell, Instagram, Telegram, WhatsApp, API Job');
+            console.log('✅ NEW IFRAME PAGES ADDED: API Job, 1xBet, Facebook Sell, Instagram Sell, Telegram Sell, WhatsApp Sell (full-screen preview like Spin/Gift)');
 
             // Add event listener for wallet dropdown
             const walletSelect = document.getElementById('withdraw-wallet-select');
