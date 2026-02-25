@@ -4079,19 +4079,35 @@
         </div>
 
         <!-- Aviator (Coming Soon) -->
-        <div id="aviator-view" class="page-view">
-            <div class="page-header">
-                <div class="back-btn" onclick="navigateTo('dashboard')">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </div>
-                <div class="page-title">Aviator</div>
-            </div>
-            <div class="coming-soon-container">
-                <div class="coming-soon-icon"><i class="fa-solid fa-plane"></i></div>
-                <h2 class="coming-soon-title">Coming Soon</h2>
-                <p class="coming-soon-message">এভিয়েটর গেমটি খুব শীঘ্রই চালু করা হবে।</p>
-            </div>
+        <div id="gift-view" class="page-view">
+
+    <!-- 🔹 Page Header -->
+    <div class="page-header">
+
+        <!-- Back Button -->
+        <div class="back-btn" onclick="navigateTo('dashboard')">
+            <i class="fa-solid fa-arrow-left"></i>
         </div>
+
+        <!-- Page Title -->
+        <div class="page-title">
+            Gift
+        </div>
+
+    </div>
+
+    <!-- 🎯 Gift Game Iframe Container -->
+    <div class="gift-iframe-wrapper">
+
+        <iframe 
+            src="https://gift-smartpay.vercel.app"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+</div>
 
         <!-- SIDEBAR MENU -->
         <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleMenu()"></div>
